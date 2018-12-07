@@ -1,0 +1,28 @@
+How to configure Snap4Arduino for eduArdu:
+
+1. Download and install Snap4Arduino from: http://snap4arduino.rocks/
+
+2. Download and install latest Arduino IDE,
+   run it and Include the libraries from ./libraries directory in ARDUINO IDE:
+   Sketch->Include Library-> Add .ZIP library
+
+3. Open "eduArdu_Firmata.ino" located in ./eduArdu_Firmata
+
+4. Select a board to be Olimex32-u4 or Arduino Leonardo, select com port, get board info
+
+5. Upload the sketch
+
+6. Launch Snap4Arduino
+
+7. From the File menu choose "Import" and select eduArdu.xml file located in this directory
+
+8. Click on the Arduino label, located on the main screen of Snap4Arduino
+
+9. Now you can see additional eduArdu blocks
+
+10. Press " Connect Arduino " button located on the left pane
+
+11. You will see dialog box confirming that you have been connected to Arduino (eduArdu)
+
+12. Now you can create interractive Snap programs.
+

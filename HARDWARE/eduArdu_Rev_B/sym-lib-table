@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name eduArdu_Rev_B)(type Legacy)(uri ${KIPRJMOD}/eduArdu_Rev_B.lib)(options "")(descr ""))
+  (lib (name eduArdu_Rev_B-rescue)(type Legacy)(uri ${KIPRJMOD}/eduArdu_Rev_B-rescue.lib)(options "")(descr ""))
+)
