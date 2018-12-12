@@ -22,7 +22,7 @@ void loop()
   static unsigned long Time=0, PrevTime=0;
   
   Time = millis();
-  if (Time-PrevTime > 300)
+  if (Time-PrevTime > 100)
   {
     PrevTime = Time;
     float Temp = T.Temperature ();

@@ -30,13 +30,12 @@
 */
 
 #include "Mouse.h"
+#include "Joystick.h"
 
 // set pin numbers for switch, joystick axes, and LED:
 const int switchPin = 2;      // switch to turn on and off mouse control
-const int mouseButton = 31;    // input pin for the mouse pushButton
-const int xAxis = A0;         // joystick X axis
-const int yAxis = A1;         // joystick Y axis
 const int ledPin = 5;         // Mouse control LED
+Joystick Joy (A0, A1);
 
 // parameters for reading the joystick:
 int range = 12;               // output range of X or Y movement
@@ -71,6 +70,8 @@ void loop() {
   // read and scale the two axes:
   int xReading = readAxis(A0);
   int yReading = readAxis(A1);
+  Serial.println (xReading);
+  Serial.println (yReading);
 
   // if the mouse control state is active, move the mouse:
   if (mouseIsActive) {
@@ -79,7 +80,7 @@ void loop() {
 
   // read the mouse button and click or not click:
   // if the mouse button is pressed:
-  if (digitalRead(mouseButton) == HIGH) {
+  if (Joy.But()) {
     // if the mouse is not pressed, press it:
     if (!Mouse.isPressed(MOUSE_LEFT)) {
       Mouse.press(MOUSE_LEFT);

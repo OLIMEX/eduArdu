@@ -14,7 +14,7 @@
 #define LED_CLOCK 15
 
 LED_Matrix Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
-Joystick Joy(JOYSTICK_X, JOYSTICK_Y, JOYSTICK_BUTTON);
+Joystick Joy(JOYSTICK_X, JOYSTICK_Y);
 
 unsigned char Text[STRING_MAX_CHAR] = "Olimex eduArdu LED matrix example!";
 char Terminal_Output[256];
@@ -30,13 +30,13 @@ void loop()
   static unsigned long Time=0, PrevTime=0;
   
   Time = millis();
-  if (Time-PrevTime > 150)
+  if (Time-PrevTime > 110)
   {
     PrevTime = Time;
     if (Joy.X () < 20)
-      Matrix.SlideLeft (1); // slide 1 position to the left
+      Matrix.SlideRight (1); // slide 1 position to the right
     if (Joy.X () > 80)
-      Matrix.SlideRight (1);  // slide 1 position to the right
+      Matrix.SlideLeft (1);  // slide 1 position to the left
 
     if (Joy.Y () < 20)
       Matrix.ChangeBrightness (-10);

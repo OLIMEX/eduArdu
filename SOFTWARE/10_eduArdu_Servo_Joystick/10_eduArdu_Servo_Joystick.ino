@@ -2,7 +2,7 @@
 #include "Joystick.h"
 
 Servo Servo1, Servo2;
-Joystick Joy(A0, A1, 31); // X, Y, Button
+Joystick Joy(A0, A1); // X, Y
 
 void setup()
 {

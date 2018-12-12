@@ -1,5 +1,15 @@
 #include "Keyboard.h"
 
+/* Special keys
+ *  KEY_LEFT_CTRL   KEY_LEFT_SHIFT   KEY_LEFT_ALT   KEY_LEFT_GUI   
+ *  KEY_RIGHT_CTRL  KEY_RIGHT_SHIFT  KEY_RIGHT_ALT  KEY_RIGHT_GUI
+ *  KEY_UP_ARROW    KEY_DOWN_ARROW   KEY_LEFT_ARROW KEY_RIGHT_ARROW
+ *  KEY_BACKSPACE   KEY_TAB          KEY_RETURN     KEY_ESC
+ *  KEY_INSERT      KEY_DELETE       KEY_PAGE_UP    KEY_PAGE_DOWN   
+ *  KEY_HOME        KEY_END          KEY_CAPS_LOCK  
+ *  KEY_F1 ...KEY_F24
+ */
+
 #define _KEY_D9   'a'
 #define _KEY_D10  'b'
 #define _KEY_D13  'c'
@@ -23,9 +33,9 @@ void setup()
 
 void loop ()
 {
-  if (!digitalRead (9))
-    Keyboard.press(_KEY_D9);
-  else
+  if (!digitalRead (9)) 
+       Keyboard.press(_KEY_D9);
+  else 
     Keyboard.release(_KEY_D9);
 
   if (!digitalRead (10))
@@ -53,4 +63,3 @@ void loop ()
   else
     Keyboard.release(_KEY_D16);
 }
-

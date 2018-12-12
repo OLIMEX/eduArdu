@@ -1,7 +1,9 @@
+#include "Joystick.h"
 #include "Buzzer.h"
 #include "Tracks/All_Tracks.h"
 
 Buzzer Buzz (6);
+Joystick Joy(A0, A1);
 
 void Imperial_March ()
 {
@@ -48,7 +50,9 @@ void setup()
 
 void loop()
 {
-  
+  while (!Joy.But ()) // push the button on the joystick to start the buzzzer
+    Buzz.Mute ();
+
   Imperial_March ();
   //Amazing_Grace ();
   //Mario_Bros ();
