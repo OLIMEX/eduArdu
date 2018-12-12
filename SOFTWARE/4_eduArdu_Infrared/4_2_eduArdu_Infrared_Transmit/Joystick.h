@@ -6,14 +6,16 @@
 class Joystick
 {
 public:
+	Joystick (int PinX, int PinY);
 	Joystick (int PinX, int PinY, int PinBut);
-	float X_Raw ();
-	float Y_Raw ();
+	int X_Raw ();
+	int Y_Raw ();
 	float X ();
 	float Y ();
 	bool But ();
 private:
 	int X_Axis, Y_Axis, B;
+	bool Button_on_digital_pin;
 };
 
 #endif

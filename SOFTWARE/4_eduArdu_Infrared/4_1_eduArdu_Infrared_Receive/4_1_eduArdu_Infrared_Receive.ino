@@ -54,8 +54,8 @@ void  dumpInfo (decode_results *results)
     return;
   }
 
-  if ((results->decode_type == UNKNOWN) || (results->value == 0xFFFFFFFF))  // filter to skip the invalid data
-    return;
+  //if ((results->decode_type == UNKNOWN) || (results->value == 0xFFFFFFFF))  // filter to skip the invalid data
+    //return;
   
   // Show Encoding standard
   Serial.print("Encoding  : ");

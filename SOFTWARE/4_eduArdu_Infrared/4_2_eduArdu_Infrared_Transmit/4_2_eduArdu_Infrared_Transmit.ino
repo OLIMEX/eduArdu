@@ -2,7 +2,7 @@
 #include "Joystick.h"
 
 IRsend irsend;
-Joystick Joy(A0, A1, 31); // X, Y, Button
+Joystick Joy(A0, A1); // X, Y
 
 #define _RC5
 //#define _NEC

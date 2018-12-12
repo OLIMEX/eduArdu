@@ -144,6 +144,7 @@ void IRsend::custom_delay_usec(unsigned long uSecs) {
 			PORTF = PORTF & 0xFE;
 	} // normal wait
   } 
+	PORTF = PORTF & 0xFE;
   //else {
   //  __asm__("nop\n\t"); // must have or compiler optimizes out
   //}
