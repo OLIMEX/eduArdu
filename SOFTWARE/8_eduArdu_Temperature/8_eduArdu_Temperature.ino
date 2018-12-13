@@ -1,3 +1,13 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+Demo that shows temperature on the LED matrix (sliding the text).
+On the terminal you can monitor the raw data and the temperature.
+**********************************************************************/
+
 #include <string.h>
 #include "TCN75.h"
 #include "LED_Matrix.h"
@@ -32,7 +42,7 @@ void loop()
     Serial.println (T.RawData (), HEX);
     sprintf (Buff, "%dC ", (int)Temp);
     Matrix.DisplayText ((unsigned char*)Buff);
-    Matrix.SlideRight (1);
+    Matrix.SlideLeft (1);
   }
   Matrix.UpdateText ();
 }

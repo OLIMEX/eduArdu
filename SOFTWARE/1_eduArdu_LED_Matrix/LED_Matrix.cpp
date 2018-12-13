@@ -132,7 +132,7 @@ void LED_Matrix::UpdateText()
 	UpdateMatrix();
 }
 
-void LED_Matrix::SlideLeft (int Positions)
+void LED_Matrix::SlideRight (int Positions)
 {
 	LED_Offset=LED_Offset - Positions;
 	if (LED_Offset < 0)
@@ -140,7 +140,7 @@ void LED_Matrix::SlideLeft (int Positions)
 	UpdateText ();
 }
 
-void LED_Matrix::SlideRight (int Positions)
+void LED_Matrix::SlideLeft (int Positions)
 {
 	LED_Offset = (LED_Offset + Positions) % (CHAR_WIDTH * TextLen);
 	UpdateText ();

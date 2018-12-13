@@ -1,3 +1,15 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+The buzzer beeps (if enabled) with frequency depending on
+the light sensor value. You toggle the buzzer enable/disable by
+pushing the button. By default it is disabled.
+On the terminal you can monitor the light sensor data (raw and %)
+**********************************************************************/
+
 #include <string.h>
 #include "Buzzer.h"
 #include "Light_Sensor.h"

@@ -1,3 +1,17 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+Demo sketch using the Adafruit library "NeoPixel". Using the joystick
+you can change the color of the RGB LED.
+0-359 degrees changes the hue, while saturation is based on the range
+from the center. Lightness is always set to 50%.
+By pushing the joystick button you lock that color on the RGB LED.
+Push it again to release it and select another color.
+**********************************************************************/
+
 #include "Adafruit_NeoPixel.h"
 #include "Joystick.h"
 #include <math.h>
@@ -140,4 +154,3 @@ void loop ()
   if (Set_LED)
     Joystick_to_Color (Joy.X(), Joy.Y());
 }
-

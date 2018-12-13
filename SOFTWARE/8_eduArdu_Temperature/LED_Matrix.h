@@ -45,9 +45,9 @@ public:
 
 	void UpdateText();
 
-	void SlideLeft (int Positions);
-
 	void SlideRight (int Positions);
+
+	void SlideLeft (int Positions);
 
 	// erase a Pixel
 	void erasePixel(int x, int y);

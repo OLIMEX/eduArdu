@@ -1,4 +1,24 @@
-#include <IRremote.h>
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+This demo is based on IRsendDemo sketch of the "IRremote" library.
+Allows you to send commands by pressing the button or moving
+the joystick in the four directions:
+Left/Right is for decrease/increase volume of the sound.
+Up/Down is for channel up/down.
+Pushing the button is turn on/off.
+
+IMPORTANT: For eduArdu rev.A you need to use the patched IRremote library:
+https://github.com/OLIMEX/eduArdu/blob/master/SOFTWARE/4_eduArdu_Infrared/IRremote.zip
+
+Note: The command codes are different for each device so you
+have to define them in your sketch in order to work properly.
+**********************************************************************/
+
+#include <IRremote.h>  // go to Sketch --> Include Library --> Manage Libraries --> IRremote (tested with 2.2.3v)
 #include "Joystick.h"
 
 IRsend irsend;

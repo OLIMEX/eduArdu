@@ -1,3 +1,13 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+A simple demo for PIR detector that triggers the buzzer (like siren)
+and turns on the LED (D12) for a short time when motion is detected.
+**********************************************************************/
+
 #define LED 12
 #define PIR 5
 #define BUZZER  6
@@ -59,4 +69,3 @@ void loop()
     }
   }
 }
-

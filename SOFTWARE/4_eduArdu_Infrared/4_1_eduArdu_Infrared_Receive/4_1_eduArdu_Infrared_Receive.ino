@@ -1,4 +1,15 @@
-#include <IRremote.h>
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+This demo is based on IRrecvDumpV2 sketch of the "IRremote" library.
+On the terminal you can monitor the input data from IR transmitters.
+You will see the infrared protocol and the code.
+**********************************************************************/
+
+#include <IRremote.h>  // go to Sketch --> Include Library --> Manage Libraries --> IRremote (tested with 2.2.3v)
 
 IRrecv irrecv(7);
 

@@ -1,3 +1,16 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+The buzzer starts playing a melody when you push the button.
+You add/remove/change which melody to be played by
+comment/uncomment the functions in the loop routine.
+To create a new track you can add a new file and do
+the same model as the already existing ones (check folder Tracks)
+**********************************************************************/
+
 #include "Joystick.h"
 #include "Buzzer.h"
 #include "Tracks/All_Tracks.h"
@@ -45,7 +58,6 @@ void Silent_Night_Holy_Night ()
 
 void setup()
 {
-  pinMode (31, INPUT);  // button
 }
 
 void loop()

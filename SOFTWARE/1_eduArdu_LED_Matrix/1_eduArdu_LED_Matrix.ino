@@ -1,3 +1,17 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+Display text on the LED-matrix.
+Text could be slided using the joystick using
+the left/right side of the X axis.
+You can increase/decrease brightness using
+up/down side of the Y axis.
+On the terminal you can monitor the data from the joystick.
+**********************************************************************/
+
 #include <string.h>
 #include "LED_Matrix.h"
 #include "font.h"
@@ -34,9 +48,9 @@ void loop()
   {
     PrevTime = Time;
     if (Joy.X () < 20)
-      Matrix.SlideRight (1); // slide 1 position to the right
+      Matrix.SlideLeft (1); // slide TEXT 1 position to the left
     if (Joy.X () > 80)
-      Matrix.SlideLeft (1);  // slide 1 position to the left
+      Matrix.SlideRight (1);  // slide TEXT 1 position to the right
 
     if (Joy.Y () < 20)
       Matrix.ChangeBrightness (-10);

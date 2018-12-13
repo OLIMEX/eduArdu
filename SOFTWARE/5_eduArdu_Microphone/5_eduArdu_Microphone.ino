@@ -1,5 +1,14 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+A simple demo that toggles the builtin LED (D12) when detects noise.
+**********************************************************************/
+
 #define LED 12
-#define MICROPHONE  3
+#define MICROPHONE  A3
 
 #define THRESHOLD 75  // higher value means less sensitivity
 

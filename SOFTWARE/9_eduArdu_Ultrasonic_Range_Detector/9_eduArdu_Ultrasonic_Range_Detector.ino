@@ -1,3 +1,17 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+Demo sketch using "NewPing" library (by Tim Eckel).
+The buzzer beeps (if enabled) with frequency
+depending on the distance to the nearest object.
+When below 50 cm buzzer beeps with higher frequency and more often.
+By pushing the button you enable/disable the buzzer.
+On the terminal you can monitor the distance to the nearest object.
+**********************************************************************/
+
 #include <NewPing.h>  // go to Sketch --> Include Library --> Manage Libraries --> NewPing (test with 1.9.1v)
 #include "Buzzer.h"
 #include "Joystick.h"

@@ -1,3 +1,14 @@
+/**********************************************************************
+Demo example for Olimex board eduArdu
+Tested with Arduino 1.8.8
+Date: 2018/12/12
+
+Description:
+Demo sketch using the default Arduino library "Keyboard".
+When D9/D10/D13/D14/D15/D16 are low they trigger
+keys on the keyboard respectively: a/b/c/d/e/f
+**********************************************************************/
+
 #include "Keyboard.h"
 
 /* Special keys
