@@ -11,9 +11,10 @@ To create a new track you can add a new file and do
 the same model as the already existing ones (check folder Tracks)
 **********************************************************************/
 
-#include "Joystick.h"
-#include "Buzzer.h"
+#include <Joystick.h>
+#include <Buzzer.h>
 #include "Tracks/All_Tracks.h"
+
 
 Buzzer Buzz (6);
 Joystick Joy(A0, A1);

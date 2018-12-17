@@ -13,8 +13,8 @@ On the terminal you can monitor the distance to the nearest object.
 **********************************************************************/
 
 #include <NewPing.h>  // go to Sketch --> Include Library --> Manage Libraries --> NewPing (test with 1.9.1v)
-#include "Buzzer.h"
-#include "Joystick.h"
+#include <Buzzer.h>
+#include <Joystick.h>
 
 #define US_TX 8
 #define US_RX 4

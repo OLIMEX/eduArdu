@@ -12,8 +12,8 @@ By pushing the joystick button you lock that color on the RGB LED.
 Push it again to release it and select another color.
 **********************************************************************/
 
-#include "Adafruit_NeoPixel.h"
-#include "Joystick.h"
+#include <Adafruit_NeoPixel.h>
+#include <Joystick.h>
 #include <math.h>
 
 #define PIN A4

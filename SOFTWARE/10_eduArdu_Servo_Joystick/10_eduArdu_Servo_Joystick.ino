@@ -10,7 +10,7 @@ respective joystick axis: X for Servo 1; Y for Servo 2.
 **********************************************************************/
 
 #include <Servo.h>
-#include "Joystick.h"
+#include <Joystick.h>
 
 Servo Servo1, Servo2;
 Joystick Joy(A0, A1); // X, Y

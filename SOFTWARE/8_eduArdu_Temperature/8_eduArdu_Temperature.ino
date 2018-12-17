@@ -9,8 +9,8 @@ On the terminal you can monitor the raw data and the temperature.
 **********************************************************************/
 
 #include <string.h>
-#include "TCN75.h"
-#include "LED_Matrix.h"
+#include <TCN75.h>
+#include <LED_Matrix.h>
 
 // LED Matrix pins
 #define LED_LATCH 11
@@ -29,20 +29,27 @@ void setup()
 
 void loop()
 {
-  static unsigned long Time=0, PrevTime=0;
+  static unsigned long Time=0, PrevTime=0; 
+  PrevTime = Time;
+  float Temp = T.Temperature ();
   
-  Time = millis();
-  if (Time-PrevTime > 100)
+  Serial.print("Current temperature = ");
+  Serial.println (Temp);
+  Serial.print("Raw data = 0x");
+  Serial.println (T.RawData (), HEX);
+  sprintf (Buff, "%dC ", (int)Temp);
+    
+  Matrix.DisplayText ((unsigned char*)Buff);
+  for(int i=0;i<strlen(Buff)*8;)
   {
-    PrevTime = Time;
-    float Temp = T.Temperature ();
-    Serial.print("Current temperature = ");
-    Serial.println (Temp);
-    Serial.print("Raw data = 0x");
-    Serial.println (T.RawData (), HEX);
-    sprintf (Buff, "%dC ", (int)Temp);
-    Matrix.DisplayText ((unsigned char*)Buff);
-    Matrix.SlideLeft (1);
+    Time=millis();
+    if(Time - PrevTime >100){
+       Matrix.SlideLeft (1);
+       i++;
+       PrevTime = Time;
+      } 
+      
+      Matrix.UpdateText ();
+     
   }
-  Matrix.UpdateText ();
 }

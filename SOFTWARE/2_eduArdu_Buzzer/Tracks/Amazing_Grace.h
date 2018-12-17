@@ -3,7 +3,7 @@
 #ifndef	_AMAZING_GRACE_H
 #define	_AMAZING_GRACE_H
 
-#include "../Notes.h"
+
 
 int AG1_Tempo = 76;
 const int   AG1_Note[] =     {_g4, _c5, _e5, _c5, _e5, _d5, _c5, _a4, _g4, _g4, _c5, _e5, _c5, _e5, _d5, _e5, _END};

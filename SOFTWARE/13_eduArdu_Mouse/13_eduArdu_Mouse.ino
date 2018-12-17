@@ -10,7 +10,7 @@ and when you press the button you trigger left click.
 **********************************************************************/
 
 #include "Mouse.h"
-#include "Joystick.h"
+#include <Joystick.h>
 
 // set pin numbers for switch, joystick axes, and LED:
 const int switchPin = 2;      // switch to turn on and off mouse control

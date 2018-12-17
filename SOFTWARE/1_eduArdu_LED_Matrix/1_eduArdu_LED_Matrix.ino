@@ -13,9 +13,9 @@ On the terminal you can monitor the data from the joystick.
 **********************************************************************/
 
 #include <string.h>
-#include "LED_Matrix.h"
-#include "font.h"
-#include "Joystick.h"
+#include <LED_Matrix.h>
+#include <font.h>
+#include <Joystick.h>
 
 // Joystick pins
 #define JOYSTICK_X  A0

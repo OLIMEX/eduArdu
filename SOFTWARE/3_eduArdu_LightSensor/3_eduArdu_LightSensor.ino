@@ -11,9 +11,9 @@ On the terminal you can monitor the light sensor data (raw and %)
 **********************************************************************/
 
 #include <string.h>
-#include "Buzzer.h"
-#include "Light_Sensor.h"
-#include "Joystick.h"
+#include <Buzzer.h>
+#include <Light_Sensor.h>
+#include <Joystick.h>
 
 Light_Sensor Sensor(A2);
 Buzzer Buzz (6);
