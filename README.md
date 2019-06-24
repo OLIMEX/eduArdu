@@ -17,3 +17,4 @@ Introduction video: https://youtu.be/3kFrveMF56s
 ## Licensee
 * Hardware is released under Apache 2.0 Licensee
 * Software is released under GPL3 Licensee
+* Documentation is released under CC BY-SA 3.0
