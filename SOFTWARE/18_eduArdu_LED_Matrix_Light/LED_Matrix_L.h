@@ -11,10 +11,10 @@ LED_Matrix_L is lightweight Library to drive the Olimex 8x8 (non-rgb) matrix
 
 typedef unsigned char uchar;
 
-class LED_MatrixL
+class LED_Matrix_L
 {
 public:
-	LED_MatrixL(int latchPin, int dataPin, int clockPin);	// constructor for an object of the class initializing the SPI pins
+	LED_Matrix_L(int latchPin, int dataPin, int clockPin);	// constructor for an object of the class initializing the SPI pins
 
 	void Clear(); 				// clears matrix
 

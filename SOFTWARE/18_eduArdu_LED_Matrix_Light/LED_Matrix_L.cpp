@@ -4,7 +4,7 @@ Based on the original library LED_Matrix created by Lutz Reiter, Dec 2014.
 */
 #include "LED_Matrix_L.h"
 
-LED_MatrixL::LED_MatrixL(int latchPin, int dataPin, int clockPin)
+LED_Matrix_L::LED_Matrix_L(int latchPin, int dataPin, int clockPin)
 {
 	this->dataPin = dataPin;
 	this->latchPin = latchPin;
@@ -17,14 +17,14 @@ LED_MatrixL::LED_MatrixL(int latchPin, int dataPin, int clockPin)
 	this->Clear();
 }
 
-void LED_MatrixL::Clear()		// Clears matrix
+void LED_Matrix_L::Clear()		// Clears matrix
 {
 	for (int i=0;i<ROWS;i++)
 	this->matrix[i] = 0;
 }
 
 // draws a pixel
-void LED_MatrixL::SetPixel(int x, int y)
+void LED_Matrix_L::SetPixel(int x, int y)
 {
 	if ((x<0) || (x>=ROWS) || (y<0) || (y>=ROWS))
 		return;
@@ -32,7 +32,7 @@ void LED_MatrixL::SetPixel(int x, int y)
 }
 
 // erase a Pixel
-void LED_MatrixL::ClearPixel(int x, int y)
+void LED_Matrix_L::ClearPixel(int x, int y)
 {
 	if ((x<0) || (x>=ROWS) || (y<0) || (y>=ROWS))
 		return;
@@ -41,7 +41,7 @@ void LED_MatrixL::ClearPixel(int x, int y)
 }
 
 // Get the value of the coordinates pixel
-int LED_MatrixL::GetPixel(int x, int y)
+int LED_Matrix_L::GetPixel(int x, int y)
 {
 	if ((x<0) || (x>=ROWS) || (y<0) || (y>=ROWS))
 		return;
@@ -51,7 +51,7 @@ int LED_MatrixL::GetPixel(int x, int y)
 		return 0;
 }
 
-void LED_MatrixL::Line (int x1, int y1, int x2, int y2)
+void LED_Matrix_L::Line (int x1, int y1, int x2, int y2)
 {
 	int dx, dy, sx, sy, err, e2;
 	dx = abs (x2-x1);
@@ -88,7 +88,7 @@ void LED_MatrixL::Line (int x1, int y1, int x2, int y2)
 }
 
 // draws a rectangle
-void LED_MatrixL::DrawRectangle(int x, int y, int w, int h, boolean filled)
+void LED_Matrix_L::DrawRectangle(int x, int y, int w, int h, boolean filled)
 {
 	if (filled)
 	{
@@ -111,7 +111,7 @@ void LED_MatrixL::DrawRectangle(int x, int y, int w, int h, boolean filled)
 	}
 }
 
-void LED_MatrixL::UpdateMatrix()
+void LED_Matrix_L::UpdateMatrix()
 {
 	for (byte i=0; i<ROWS; i++)
 	{
@@ -119,6 +119,7 @@ void LED_MatrixL::UpdateMatrix()
 		PORTB = PORTB & 0x7F;	//digitalWrite(this->latchPin, LOW);
 		shiftOut(this->dataPin, this->clockPin, LSBFIRST, matrix[i]);
 		shiftOut(this->dataPin, this->clockPin, LSBFIRST, 1 << i);
-		PORTB = PORTB | 0x80;	//digitalWrite(this->latchPin, HIGH);
+    PORTB = PORTB | 0x80; //digitalWrite(this->latchPin, HIGH);
 	}
+
 }

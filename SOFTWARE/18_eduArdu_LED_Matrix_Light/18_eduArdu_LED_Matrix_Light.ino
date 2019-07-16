@@ -14,7 +14,7 @@ Description:
 #define LED_DATA 16
 #define LED_CLOCK 15
 
-LED_MatrixL Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
+LED_Matrix_L Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
 
 void setup()
 {
@@ -23,6 +23,44 @@ void setup()
 
 void loop()
 {
-	Matrix::SetPiexl(1,1);
-	
+	for (int j= 0;j<8;j++)
+	{
+	  Matrix.Line(0,0,7,j);
+    for( int i = 0;i<20;i++) 
+    {
+      Matrix.UpdateMatrix();
+    }
+    Matrix.Clear();
+    Matrix.UpdateMatrix();
+	}
+  for (int j= 7;j>=0;j--)
+  {
+    Matrix.Line(0,0,j,7);
+    for( int i = 0;i<20;i++) 
+    {
+      Matrix.UpdateMatrix();
+    }
+    Matrix.Clear();
+    Matrix.UpdateMatrix();
+  }
+  for (int j= 0;j<8;j++)
+  {
+    Matrix.Line(0,7,j,0);
+    for( int i = 0;i<20;i++) 
+    {
+      Matrix.UpdateMatrix();
+    }
+    Matrix.Clear();
+    Matrix.UpdateMatrix();
+  }
+  for (int j= 7;j>=0;j--)
+  {
+    Matrix.Line(7,7,0,j);
+    for( int i = 0;i<20;i++) 
+    {
+      Matrix.UpdateMatrix();
+    }
+    Matrix.Clear();
+    Matrix.UpdateMatrix();
+  }
 }
