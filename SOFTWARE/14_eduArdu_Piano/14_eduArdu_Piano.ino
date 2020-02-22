@@ -8,7 +8,7 @@ void setup()
   pinMode (31, INPUT);  // button
   pinMode (9, INPUT);
   pinMode (10, INPUT);
-  pinMode (13, INPUT);
+  pinMode (23, INPUT);
   pinMode (14, INPUT);
   pinMode (15, INPUT);
   pinMode (16, INPUT);
@@ -28,7 +28,7 @@ void loop()
      Buzz.Mute();
   }
   
-  if (!digitalRead (13)) {
+  if (!digitalRead (23)) {
      Buzz.Beep(2000);
      delay(300);
      Buzz.Mute();

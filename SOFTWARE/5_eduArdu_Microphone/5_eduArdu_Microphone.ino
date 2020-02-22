@@ -16,6 +16,7 @@ void setup()
 {
   pinMode(LED, OUTPUT);
   digitalWrite (LED, LOW);
+  Serial.begin(115200);
 }
 
 void loop()
@@ -31,6 +32,8 @@ void loop()
     if (Sample < Min)
       Min = Sample;
 
+    Serial.println(Max-Min);
+    
     if((Max-Min) > THRESHOLD)
     {
       digitalWrite (LED, !digitalRead(LED));

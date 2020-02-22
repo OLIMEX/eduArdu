@@ -23,7 +23,7 @@ keys on the keyboard respectively: a/b/c/d/e/f
 
 #define _KEY_D9   'a'
 #define _KEY_D10  'b'
-#define _KEY_D13  'c'
+#define _KEY_D23  'c'
 #define _KEY_D14  'd'
 #define _KEY_D15  'e'
 #define _KEY_D16  'f'
@@ -36,7 +36,7 @@ void setup()
 
   pinMode (9, INPUT);
   pinMode (10, INPUT);
-  pinMode (13, INPUT);
+  pinMode (23, INPUT);
   pinMode (14, INPUT);
   pinMode (15, INPUT);
   pinMode (16, INPUT);
@@ -54,10 +54,10 @@ void loop ()
   else
     Keyboard.release(_KEY_D10);
     
-  if (!digitalRead (13))
-    Keyboard.press(_KEY_D13);
+  if (!digitalRead (23))
+    Keyboard.press(_KEY_D23);
   else
-    Keyboard.release(_KEY_D13);
+    Keyboard.release(_KEY_D23);
     
   if (!digitalRead (14))
     Keyboard.press(_KEY_D14);

@@ -134,7 +134,7 @@ void setup()
   Serial.begin (115200);
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
-  for (R=0; R<255; R++)
+  for (int i=0; i<255; i++)
     SetPixel (R, G, B);
 }
 

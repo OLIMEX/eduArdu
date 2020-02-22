@@ -124,7 +124,7 @@ uint8_t readCapacitivePin(int pinToMeasure) {
 
 #define _KEY_D9   'a'
 #define _KEY_D10  's'
-#define _KEY_D13  'd'
+#define _KEY_D23  'd'
 #define _KEY_D14  'f'
 #define _KEY_D15  'g'
 #define _KEY_D16  'w'
@@ -148,10 +148,10 @@ void loop ()
   else
     Keyboard.release(_KEY_D10);
     
-  if (readCapacitivePin(13) >3)
-    Keyboard.press(_KEY_D13);
+  if (readCapacitivePin(23) >3)
+    Keyboard.press(_KEY_D23);
   else
-    Keyboard.release(_KEY_D13);
+    Keyboard.release(_KEY_D23);
     
   if (readCapacitivePin(14) >3)
     Keyboard.press(_KEY_D14);
