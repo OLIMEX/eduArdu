@@ -1,5 +1,5 @@
-#include "Joystick.h"
-#include "Buzzer.h"
+#include <Joystick.h>
+#include <Buzzer.h>
 
 Buzzer Buzz (6);
 

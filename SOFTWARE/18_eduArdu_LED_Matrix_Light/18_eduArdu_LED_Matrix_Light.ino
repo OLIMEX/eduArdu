@@ -1,5 +1,5 @@
 /**********************************************************************
-Demo example for Olimex library "LED_Matrix"
+Demo example for Olimex library "LED_Matrix_L"
 Tested with Arduino 1.8.8 on eduArdu
 Date: 2018/12/12
 
@@ -7,7 +7,7 @@ Description:
 
 **********************************************************************/
 
-#include "LED_Matrix_L.h"
+#include <LED_Matrix_L.h>
 
 // LED Matrix pins
 #define LED_LATCH 11
