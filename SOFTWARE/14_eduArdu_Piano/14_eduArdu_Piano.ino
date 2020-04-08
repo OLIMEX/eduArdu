@@ -1,7 +1,7 @@
-#include <Joystick.h>
-#include <Buzzer.h>
+#include <Olimex_Joystick.h>
+#include <Olimex_Buzzer.h>
 
-Buzzer Buzz (6);
+Olimex_Buzzer Buzz (6);
 
 void setup()
 {

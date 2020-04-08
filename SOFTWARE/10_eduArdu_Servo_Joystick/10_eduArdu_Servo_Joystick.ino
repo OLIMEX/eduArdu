@@ -10,10 +10,10 @@ respective joystick axis: X for Servo 1; Y for Servo 2.
 **********************************************************************/
 
 #include <Servo.h>
-#include <Joystick.h>
+#include <Olimex_Joystick.h>
 
 Servo Servo1, Servo2;
-Joystick Joy(A0, A1); // X, Y
+Olimex_Joystick Joy(A0, A1); // X, Y
 
 void setup()
 {
@@ -26,4 +26,3 @@ void loop()
   Servo1.write (Joy.X()*1.8);
   Servo2.write (Joy.Y()*1.8);
 }
-

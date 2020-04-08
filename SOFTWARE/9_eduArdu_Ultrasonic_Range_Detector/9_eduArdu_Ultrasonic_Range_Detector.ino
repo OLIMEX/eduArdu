@@ -13,15 +13,15 @@ On the terminal you can monitor the distance to the nearest object.
 **********************************************************************/
 
 #include <NewPing.h>  // go to Sketch --> Include Library --> Manage Libraries --> NewPing (test with 1.9.1v)
-#include <Buzzer.h>
-#include <Joystick.h>
+#include <Olimex_Buzzer.h>
+#include <Olimex_Joystick.h>
 
 #define US_TX 8
 #define US_RX 4
 #define MAX_DISTANCE   200 // max distance in cm
 
-Buzzer Buzz(6);
-Joystick Joy (A0, A1);
+Olimex_Buzzer Buzz(6);
+Olimex_Joystick Joy (A0, A1);
 
 NewPing Sonar(US_TX, US_RX, MAX_DISTANCE);
 

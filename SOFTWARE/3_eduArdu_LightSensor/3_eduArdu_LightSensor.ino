@@ -10,14 +10,13 @@ pushing the button. By default it is disabled.
 On the terminal you can monitor the light sensor data (raw and %)
 **********************************************************************/
 
-#include <string.h>
-#include <Buzzer.h>
-#include <Light_Sensor.h>
-#include <Joystick.h>
+#include <Olimex_Buzzer.h>
+#include <Olimex_Light_Sensor.h>
+#include <Olimex_Joystick.h>
 
-Light_Sensor Sensor(A2);
-Buzzer Buzz (6);
-Joystick Joy (A0, A1);
+Olimex_Light_Sensor Sensor(A2);
+Olimex_Buzzer Buzz (6);
+Olimex_Joystick Joy (A0, A1);
 
 char Buff[64];
 int Data, BuzzOn = 0, Flag = 1;

@@ -1,0 +1,15 @@
+Challenges for kids after they study all demo codes:
+
+1. Type on keyboard via TV remote control buttons
+uses: demo 11 and demo 4
+
+
+2. Every time you clap with hands the RGB LED change it's color randomly
+uses: demo 5 and demo 7
+
+3. Controlling servo motor with capacitive sensor, each time you grab D14 and GND the servo motor change it's angle depend on how strong you press.
+uses: demo 10 and 19
+
+4. Display on LED matrix light bars which stack up when you get closer
+uses: demo 6 and 20
+

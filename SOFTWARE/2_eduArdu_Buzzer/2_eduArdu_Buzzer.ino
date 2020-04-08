@@ -11,13 +11,13 @@ To create a new track you can add a new file and do
 the same model as the already existing ones (check folder Tracks)
 **********************************************************************/
 
-#include <Joystick.h>
-#include <Buzzer.h>
+#include <Olimex_Joystick.h>
+#include <Olimex_Buzzer.h>
 #include "Tracks/All_Tracks.h"
 
 
-Buzzer Buzz (6);
-Joystick Joy(A0, A1);
+Olimex_Buzzer Buzz (6);
+Olimex_Joystick Joy(A0, A1);
 
 void Imperial_March ()
 {

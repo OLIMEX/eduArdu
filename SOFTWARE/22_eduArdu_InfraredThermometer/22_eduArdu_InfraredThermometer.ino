@@ -1,16 +1,20 @@
 /**********************************************************************
 Demo example for Olimex board eduArdu
-Tested with Arduino 1.8.8
-Date: 2018/12/12
+Tested with Arduino 1.8.12
+Date: 2020/04-07
 
 Description:
-Demo that shows temperature on the LED matrix (sliding the text).
+Demo that shows temperature measured with MOD-IR-TEMP on the LED matrix 
+(sliding the text). 
 On the terminal you can monitor the raw data and the temperature.
 **********************************************************************/
-
 #include <string.h>
-#include <Olimex_TCN75.h>
+#include "floatToString.h"
 #include <Olimex_LED_Matrix.h>
+#include <Adafruit_MLX90614.h>
+#include <Olimex_Buzzer.h>
+
+Adafruit_MLX90614 modIrTemp = Adafruit_MLX90614();
 
 // LED Matrix pins
 #define LED_LATCH 11
@@ -18,12 +22,15 @@ On the terminal you can monitor the raw data and the temperature.
 #define LED_CLOCK 15
 
 Olimex_LED_Matrix Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
-Olimex_TCN75 T (0x48);
 
-char Buff[8];
+Olimex_Buzzer Buzz (6);
+
+char str[10];
+float Temp;
 
 void setup()
 {
+  modIrTemp.begin();  
   Serial.begin(115200);
 }
 
@@ -31,19 +38,24 @@ void loop()
 {
   static unsigned long Time=0, PrevTime=0; 
   PrevTime = Time;
-  float Temp = T.Temperature ();
-  
-  Serial.print("Current temperature = ");
-  Serial.println (Temp);
-  Serial.print("Raw data = 0x");
-  Serial.println (T.RawData (), HEX);
-  sprintf (Buff, "%dC ", (int)Temp);
-    
-  Matrix.DisplayText ((unsigned char*)Buff);
-  for(int i=0;i<strlen(Buff)*8;)
+  Temp = modIrTemp.readObjectTempC();
+
+  floatToString(str, Temp, 1,2);
+  strcat(str,"C ");
+
+  if (Temp>38.0)
+    for (int b =0;b<3;b++) {
+      Buzz.Beep(1000);
+      delay(100);
+      Buzz.Mute();
+      delay(100);    
+    }
+ 
+  Matrix.DisplayText ((unsigned char*)str);
+  for(int i=0;i<strlen(str)*8;)
   {
     Time=millis();
-    if(Time - PrevTime >100){
+    if(Time - PrevTime >60){
        Matrix.SlideLeft (1);
        i++;
        PrevTime = Time;

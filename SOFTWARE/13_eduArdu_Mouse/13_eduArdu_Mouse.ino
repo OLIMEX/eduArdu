@@ -10,12 +10,12 @@ and when you press the button you trigger left click.
 **********************************************************************/
 
 #include "Mouse.h"
-#include <Joystick.h>
+#include <Olimex_Joystick.h>
 
 // set pin numbers for switch, joystick axes, and LED:
 const int switchPin = 2;      // switch to turn on and off mouse control
 const int ledPin = 5;         // Mouse control LED
-Joystick Joy (A0, A1);
+Olimex_Joystick Joy (A0, A1);
 
 // parameters for reading the joystick:
 int range = 12;               // output range of X or Y movement
