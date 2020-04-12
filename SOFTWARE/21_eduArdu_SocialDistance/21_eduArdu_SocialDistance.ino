@@ -27,11 +27,13 @@ void setup()
 void loop()
 {
   distance = Sonar.ping_cm ();
-  Serial.print(distance);
+  if (distance == 0) distance = 151;
+  Serial.println(distance);
 
   if (distance<=150) {
     Buzz.Beep (1000);
     delay(100);
+    Buzz.Mute ();
   }
   delay (500);
 }
