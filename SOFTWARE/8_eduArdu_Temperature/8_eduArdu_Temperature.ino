@@ -9,16 +9,16 @@ On the terminal you can monitor the raw data and the temperature.
 **********************************************************************/
 
 #include <string.h>
-#include <TCN75.h>
-#include <LED_Matrix.h>
+#include <Olimex_TCN75.h>
+#include <Olimex_LED_Matrix.h>
 
 // LED Matrix pins
 #define LED_LATCH 11
 #define LED_DATA 16
 #define LED_CLOCK 15
 
-LED_Matrix Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
-TCN75 T (0x48);
+Olimex_LED_Matrix Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
+Olimex_TCN75 T (0x48);
 
 char Buff[8];
 

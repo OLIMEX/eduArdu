@@ -7,14 +7,14 @@ Description:
 
 **********************************************************************/
 
-#include <LED_Matrix_L.h>
+#include <Olimex_LED_Matrix_L.h>
 
 // LED Matrix pins
 #define LED_LATCH 11
 #define LED_DATA 16
 #define LED_CLOCK 15
 
-LED_Matrix_L Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
+Olimex_LED_Matrix_L Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
 
 void setup()
 {

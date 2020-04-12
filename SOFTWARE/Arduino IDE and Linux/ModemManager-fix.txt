@@ -1,0 +1,13 @@
+Feedback by Leon Anavi:
+
+On Ubuntu 18.04.4 LTS following error is shown when uploading from Arduno IDE:
+
+avrdude: Expected signature for ATmega32U4 is 1E 95 87
+
+The solution is to stop modemmanager:
+
+systemctl stop ModemManager
+
+More details: https://github.com/arduino/Arduino/issues/7690
+
+

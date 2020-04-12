@@ -19,10 +19,10 @@ have to define them in your sketch in order to work properly.
 **********************************************************************/
 
 #include <IRremote.h>  // go to Sketch --> Include Library --> Manage Libraries --> IRremote (tested with 2.2.3v)
-#include "Joystick.h"
+#include "Olimex_Joystick.h"
 
 IRsend irsend;
-Joystick Joy(A0, A1); // X, Y
+Olimex_Joystick Joy(A0, A1); // X, Y
 
 #define _RC5
 //#define _NEC

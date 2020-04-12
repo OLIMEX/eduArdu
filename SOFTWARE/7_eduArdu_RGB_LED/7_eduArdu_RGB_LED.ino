@@ -13,7 +13,7 @@ Push it again to release it and select another color.
 **********************************************************************/
 
 #include <Adafruit_NeoPixel.h>
-#include <Joystick.h>
+#include <Olimex_Joystick.h>
 #include <math.h>
 
 #define PIN A4
@@ -26,7 +26,7 @@ Push it again to release it and select another color.
 //   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, PIN, NEO_GRB + NEO_KHZ800);
-Joystick Joy (A0, A1);
+Olimex_Joystick Joy (A0, A1);
 
 int R=0, G=0, B=0;
 

@@ -13,9 +13,9 @@ On the terminal you can monitor the data from the joystick.
 **********************************************************************/
 
 #include <string.h>
-#include <LED_Matrix.h>
+#include <Olimex_LED_Matrix.h>
 #include <font.h>
-#include <Joystick.h>
+#include <Olimex_Joystick.h>
 
 // Joystick pins
 #define JOYSTICK_X  A0
@@ -27,8 +27,8 @@ On the terminal you can monitor the data from the joystick.
 #define LED_DATA 16
 #define LED_CLOCK 15
 
-LED_Matrix Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
-Joystick Joy(JOYSTICK_X, JOYSTICK_Y);
+Olimex_LED_Matrix Matrix(LED_LATCH,LED_DATA,LED_CLOCK);
+Olimex_Joystick Joy(JOYSTICK_X, JOYSTICK_Y);
 
 unsigned char Text[STRING_MAX_CHAR] = "Olimex eduArdu LED matrix example!";
 char Terminal_Output[256];
