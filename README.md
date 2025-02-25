@@ -12,6 +12,7 @@ Introduction video: https://youtu.be/3kFrveMF56s
 * [Download and install Arduino IDE](https://www.arduino.cc/en/Main/Software)
 * Open Arduino IDE
 * Click **Sketch > Include Library > Add .ZIP library...** and add all libraries provided with this repository
+* If you get "arduino Error: 13 INTERNAL: Library install failed: archive is not valid: multiple files found in zip file top level" (usually when you use newer version of Arduino IDE) extract the .zip files into respective folders: `Olimex_Buzzer.zip` into `Olimex_Buzzer` in the same `libraries` folder. Then open Arduino IDE and click `File->Preferences` and change Sketchbook location to the `SOFTWARE` folder of the repo location.
 * Open a sketch, compile and upload it to Olimex eduArdu
 
 ## Licensee
